@@ -1,6 +1,7 @@
-import "@/app/globals.css";
-import Link from "next/link";
 import { Inter } from "next/font/google";
+import Header from "@/components/layout/Header";
+import "@/app/globals.css";
+import Footer from "@/components/layout/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,31 +13,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex min-h-screen flex-col`}>
-        <header className="text-center p-4">
-          <nav>
-            <ul>
-              <li>
-                <Link href="/">Home</Link>
-              </li>
-              <li>
-                <Link href="/reviews">Reviews</Link>
-              </li>
-              <li>
-                <Link href="/about" prefetch={false}>
-                  About
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </header>
-        <main className="flex-auto p-4">{children}</main>
-        <footer className="text-center p-4">
-          Games provided by{" "}
-          <a href="https://rawg.io/" target="_blank">
-            RAWG
-          </a>
-        </footer>
+      <body
+        className={`${inter.className} bg-orange-50 flex min-h-screen flex-col`}
+      >
+        <Header />
+        <main className="flex-auto py-4">{children}</main>
+        <Footer />
       </body>
     </html>
   );
