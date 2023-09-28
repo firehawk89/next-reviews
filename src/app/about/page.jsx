@@ -1,4 +1,13 @@
+"use client";
+
+import { useEffect } from "react";
+
 export default function AboutPage() {
+  useEffect(() => {
+    window.alert("Hello, world!");
+    console.log("Hello, world!");
+  }, []);
+
   return (
     <div>
       <h1>About Us</h1>
