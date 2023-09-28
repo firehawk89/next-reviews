@@ -1,7 +1,9 @@
+import Heading from "@/components/ui/Heading";
+
 export default function StardewValleyPage() {
   return (
     <div>
-      <h1>Stardew Valley</h1>
+      <Heading>Stardew Valley</Heading>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
         adipisci voluptatibus ea, omnis eius enim ullam aliquid? Itaque eligendi

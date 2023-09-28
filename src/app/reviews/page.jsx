@@ -1,9 +1,10 @@
+import Heading from "@/components/ui/Heading";
 import Link from "next/link";
 
 export default function ReviewsPage() {
   return (
     <div>
-      <h1>All Reviews</h1>
+      <Heading>All Reviews</Heading>
       <ul>
         <li className="text-xl">
           <Link href="/reviews/stardew-valley">Stardew Valley</Link>

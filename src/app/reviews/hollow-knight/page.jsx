@@ -1,7 +1,9 @@
+import Heading from "@/components/ui/Heading";
+
 export default function HollowKnightPage() {
   return (
     <div>
-      <h1>Hollow Knight</h1>
+      <Heading>Hollow Knight</Heading>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
         adipisci voluptatibus ea, omnis eius enim ullam aliquid? Itaque eligendi
