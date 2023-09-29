@@ -1,11 +1,10 @@
-import Image from "next/image";
 import Heading from "@/components/ui/Heading";
 
 export default function HollowKnightPage() {
   return (
     <div>
       <Heading>Hollow Knight</Heading>
-      <Image
+      <img
         className="rounded mb-2"
         src="/img/hollow-knight.jpg"
         width="640"
