@@ -1,10 +1,7 @@
-import { Inter } from "next/font/google";
 import Header from "@/components/layout/Header";
-import "@/app/globals.css";
 import Footer from "@/components/layout/Footer";
-import { orbitron } from "./fonts";
-
-const inter = Inter({ subsets: ["latin"] });
+import { exo2, orbitron } from "./fonts";
+import "@/app/globals.css";
 
 export const metadata = {
   title: "Reviews App",
@@ -13,10 +10,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={orbitron.variable}>
-      <body
-        className={`${inter.className} bg-orange-50 flex min-h-screen flex-col`}
-      >
+    <html lang="en" className={`${exo2.variable} ${orbitron.variable}`}>
+      <body className="font-default bg-orange-50 flex min-h-screen flex-col">
         <Header />
         <main className="flex-auto py-4">{children}</main>
         <Footer />
