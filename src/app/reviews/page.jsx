@@ -15,7 +15,9 @@ export default function ReviewsPage() {
               height="180"
               alt="Stardew Valley"
             />
-            <h2 className="text-center py-1">Stardew Valley</h2>
+            <h2 className="font-orbitron font-semibold text-center py-1">
+              Stardew Valley
+            </h2>
           </Link>
         </li>
         <li className="bg-white border rounded shadow hover:shadow-xl transition-all w-80">
@@ -27,7 +29,9 @@ export default function ReviewsPage() {
               height="180"
               alt="Stardew Valley"
             />
-            <h2 className="text-center py-1">Hollow Knight</h2>
+            <h2 className="font-orbitron font-semibold text-center py-1">
+              Hollow Knight
+            </h2>
           </Link>
         </li>
       </ul>
