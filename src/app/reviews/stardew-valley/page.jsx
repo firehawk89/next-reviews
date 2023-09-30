@@ -20,7 +20,10 @@ export default async function StardewValleyPage() {
         height="320"
         alt="Stardew Valley"
       />
-      <div dangerouslySetInnerHTML={{ __html: markdownHtml }} />
+      <div
+        className="prose prose-slate max-w-screen-sm"
+        dangerouslySetInnerHTML={{ __html: markdownHtml }}
+      />
     </article>
   );
 }
