@@ -1,9 +1,17 @@
+import { readFile } from "node:fs/promises";
+import { marked } from "marked";
 import Image from "next/image";
 import Heading from "@/components/ui/Heading";
 
-export default function StardewValleyPage() {
+export default async function StardewValleyPage() {
+  const markdownText = await readFile(
+    "./content/reviews/stardew-valley.md",
+    "utf8"
+  );
+  const markdownHtml = marked(markdownText);
+
   return (
-    <div>
+    <article>
       <Heading>Stardew Valley</Heading>
       <Image
         className="rounded mb-2"
@@ -12,12 +20,7 @@ export default function StardewValleyPage() {
         height="320"
         alt="Stardew Valley"
       />
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
-        adipisci voluptatibus ea, omnis eius enim ullam aliquid? Itaque eligendi
-        sint dignissimos fuga, doloribus optio ducimus asperiores necessitatibus
-        modi commodi magni.
-      </p>
-    </div>
+      <div dangerouslySetInnerHTML={{ __html: markdownHtml }} />
+    </article>
   );
 }
