@@ -2,7 +2,7 @@ import Heading from "@/components/ui/Heading";
 
 export default function HollowKnightPage() {
   return (
-    <div>
+    <article>
       <Heading>Hollow Knight</Heading>
       <img
         className="rounded mb-2"
@@ -17,6 +17,6 @@ export default function HollowKnightPage() {
         sint dignissimos fuga, doloribus optio ducimus asperiores necessitatibus
         modi commodi magni.
       </p>
-    </div>
+    </article>
   );
 }

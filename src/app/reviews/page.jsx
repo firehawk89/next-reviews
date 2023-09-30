@@ -3,7 +3,7 @@ import Heading from "@/components/ui/Heading";
 
 export default function ReviewsPage() {
   return (
-    <div>
+    <section>
       <Heading>All Reviews</Heading>
       <ul className="flex flex-col gap-3">
         <li className="bg-white border rounded shadow hover:shadow-xl transition-all w-80">
@@ -35,6 +35,6 @@ export default function ReviewsPage() {
           </Link>
         </li>
       </ul>
-    </div>
+    </section>
   );
 }
