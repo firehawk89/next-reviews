@@ -1,5 +1,9 @@
 import Heading from "@/components/ui/Heading";
 
+export const metadata = {
+  title: "About",
+};
+
 export default function AboutPage() {
   return (
     <section>

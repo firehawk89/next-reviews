@@ -4,7 +4,7 @@ import { exo2, orbitron } from "./fonts";
 import "@/app/globals.css";
 
 export const metadata = {
-  title: "Reviews App",
+  title: { default: "Indie Gamer", template: "%s | Indie Gamer" },
   description: "Discover and share the reviews of hundreds of indie games.",
 };
 

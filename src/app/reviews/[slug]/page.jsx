@@ -2,6 +2,14 @@ import { getReview, getSlugs } from "@/utils";
 import Image from "next/image";
 import Heading from "@/components/ui/Heading";
 
+export async function generateMetadata({ params }) {
+  const review = await getReview(params.slug);
+  console.log(review);
+  return {
+    title: review.title,
+  };
+}
+
 export async function generateStaticParams() {
   const slugs = await getSlugs();
   return slugs.map((slug) => ({
