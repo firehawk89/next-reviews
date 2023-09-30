@@ -1,17 +1,6 @@
-import { readFile } from "node:fs/promises";
-import { marked } from "marked";
-import matter from "gray-matter";
+import { getReview } from "@/utils";
 import Image from "next/image";
 import Heading from "@/components/ui/Heading";
-
-async function getReview(slug) {
-  const markdownText = await readFile(`./content/reviews/${slug}.md`, "utf8");
-  const { content, data } = matter(markdownText);
-  const markdownHtml = marked(content);
-  const { title, date, image } = data;
-
-  return { title, date, image, markdownHtml };
-}
 
 export default async function StardewValleyPage() {
   const review = await getReview("stardew-valley");
