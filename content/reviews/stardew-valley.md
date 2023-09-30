@@ -1,5 +1,6 @@
 ---
 title: "Stardew Valley"
+description: "Stardew Valley is a farm life simulation game in which players take the role of a character who inherits their deceased grandfather's dilapidated farm in a place known as Stardew Valley."
 date: "2023-09-30"
 image: "/img/stardew-valley.jpg"
 ---

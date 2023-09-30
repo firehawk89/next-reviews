@@ -1,5 +1,6 @@
 ---
 title: "Hollow Knight"
+description: "Hollow Knight is a video game in which player controls the Knight who explores Hallownest, a fallen kingdom plagued by a supernatural disease, known as the infection."
 date: "2023-09-26"
 image: "/img/hollow-knight.jpg"
 ---

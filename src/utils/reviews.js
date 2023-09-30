@@ -6,9 +6,9 @@ export async function getReview(slug) {
   const markdownText = await readFile(`./content/reviews/${slug}.md`, "utf8");
   const { content, data } = matter(markdownText);
   const markdownHtml = marked(content);
-  const { title, date, image } = data;
+  const { title, description, date, image } = data;
 
-  return { slug, title, date, image, markdownHtml };
+  return { slug, description, title, date, image, markdownHtml };
 }
 
 export async function getLatestReview() {

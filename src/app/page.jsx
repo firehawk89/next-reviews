@@ -21,9 +21,12 @@ export default async function HomePage() {
             height="180"
             alt={featuredReview.title}
           />
-          <h2 className="font-orbitron font-semibold text-center py-1 sm:px-2">
-            {featuredReview.title}
-          </h2>
+          <div className="flex flex-col text-center sm:text-left p-2">
+            <h2 className="font-orbitron font-semibold mb-1">
+              {featuredReview.title}
+            </h2>
+            <p className="border-t">{featuredReview.description}</p>
+          </div>
         </Link>
       </article>
     </section>

@@ -4,9 +4,9 @@ import Heading from "@/components/ui/Heading";
 
 export async function generateMetadata({ params }) {
   const review = await getReview(params.slug);
-  console.log(review);
   return {
     title: review.title,
+    description: review.description,
   };
 }
 
