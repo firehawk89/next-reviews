@@ -18,6 +18,7 @@
     "autoprefixer": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",
+    "gray-matter": "^4.0.3",
     "marked": "^9.0.3",
     "postcss": "latest",
     "tailwindcss": "latest"
