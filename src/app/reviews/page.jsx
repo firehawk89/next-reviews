@@ -1,39 +1,33 @@
 import Link from "next/link";
+import { getReviews } from "@/utils";
 import Heading from "@/components/ui/Heading";
 
-export default function ReviewsPage() {
+export default async function ReviewsPage() {
+  const reviews = await getReviews();
+
   return (
     <section>
       <Heading>All Reviews</Heading>
-      <ul className="flex flex-col gap-3">
-        <li className="bg-white border rounded shadow hover:shadow-xl transition-all w-80">
-          <Link href="/reviews/stardew-valley">
-            <img
-              className="rounded-t"
-              src="/img/stardew-valley.jpg"
-              width="320"
-              height="180"
-              alt="Stardew Valley"
-            />
-            <h2 className="font-orbitron font-semibold text-center py-1">
-              Stardew Valley
-            </h2>
-          </Link>
-        </li>
-        <li className="bg-white border rounded shadow hover:shadow-xl transition-all w-80">
-          <Link href="/reviews/hollow-knight">
-            <img
-              className="rounded-t"
-              src="/img/hollow-knight.jpg"
-              width="320"
-              height="180"
-              alt="Stardew Valley"
-            />
-            <h2 className="font-orbitron font-semibold text-center py-1">
-              Hollow Knight
-            </h2>
-          </Link>
-        </li>
+      <ul className="flex flex-row flex-wrap gap-3">
+        {reviews.map((review) => (
+          <li
+            key={review.slug}
+            className="bg-white border rounded shadow hover:shadow-xl transition-all w-80"
+          >
+            <Link href={`/reviews/${review.slug}`}>
+              <img
+                className="rounded-t"
+                src={review.image}
+                width="320"
+                height="180"
+                alt={review.title}
+              />
+              <h2 className="font-orbitron font-semibold text-center py-1">
+                {review.title}
+              </h2>
+            </Link>
+          </li>
+        ))}
       </ul>
     </section>
   );
