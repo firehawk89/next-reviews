@@ -11,6 +11,11 @@ export async function getReview(slug) {
   return { slug, title, date, image, markdownHtml };
 }
 
+export async function getLatestReview() {
+  const reviews = await getReviews();
+  return reviews[0];
+}
+
 export async function getReviews() {
   const slugs = await getSlugs();
 
@@ -19,6 +24,8 @@ export async function getReviews() {
     const review = await getReview(slug);
     reviews.push(review);
   }
+
+  reviews.sort((a, b) => new Date(b.date) - new Date(a.date));
 
   return reviews;
 }
