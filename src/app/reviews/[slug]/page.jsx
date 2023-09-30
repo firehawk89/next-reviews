@@ -2,8 +2,8 @@ import { getReview } from "@/utils";
 import Image from "next/image";
 import Heading from "@/components/ui/Heading";
 
-export default async function StardewValleyPage() {
-  const review = await getReview("stardew-valley");
+export default async function ReviewPage({ params }) {
+  const review = await getReview(params.slug);
 
   return (
     <article>
