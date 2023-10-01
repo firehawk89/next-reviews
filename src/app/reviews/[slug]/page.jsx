@@ -1,6 +1,7 @@
 import { getReview, getSlugs } from "@/utils";
 import Image from "next/image";
 import Heading from "@/components/ui/Heading";
+import ShareLink from "@/components/ShareLink";
 
 export async function generateMetadata({ params }) {
   const review = await getReview(params.slug);
@@ -23,9 +24,12 @@ export default async function ReviewPage({ params }) {
   return (
     <article>
       <Heading>{review.title}</Heading>
-      <time className="inline-block italic mb-2" dateTime={review.date}>
-        {review.date}
-      </time>
+      <div className="flex gap-3 items-baseline">
+        <time className="inline-block italic mb-2" dateTime={review.date}>
+          {review.date}
+        </time>
+        <ShareLink />
+      </div>
       <Image
         className="rounded mb-2"
         src={review.image}
