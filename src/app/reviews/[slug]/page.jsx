@@ -32,7 +32,7 @@ export default async function ReviewPage({ params }) {
           </time>
           <ShareLink />
         </div>
-        <Image
+        <img
           className="rounded mb-2"
           src={review.image}
           width="640"
@@ -41,7 +41,7 @@ export default async function ReviewPage({ params }) {
         />
         <div
           className="prose prose-slate max-w-screen-sm"
-          dangerouslySetInnerHTML={{ __html: review.markdownHtml }}
+          dangerouslySetInnerHTML={{ __html: review.body }}
         />
       </Container>
     </article>
