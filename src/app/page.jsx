@@ -30,10 +30,13 @@ export default async function HomePage() {
                   alt={review.title}
                   priority={index === 0}
                 />
-                <div className="flex flex-col text-center sm:text-left p-2">
-                  <h2 className="font-orbitron font-semibold mb-1">
+                <div className="flex-auto flex flex-col text-center sm:text-left p-2">
+                  <h2 className="font-orbitron font-semibold sm:mb-1">
                     {review.title}
                   </h2>
+                  <p className="hidden sm:block pt-1 border-t">
+                    {review.subtitle}
+                  </p>
                 </div>
               </Link>
             </li>
