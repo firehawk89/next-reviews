@@ -8,7 +8,6 @@ export async function generateMetadata({ params }) {
   const review = await getReview(params.slug);
   return {
     title: review.title,
-    description: review.description,
   };
 }
 
