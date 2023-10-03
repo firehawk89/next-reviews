@@ -8,6 +8,7 @@ export async function generateMetadata({ params }) {
   const review = await getReview(params.slug);
   return {
     title: review.title,
+    description: review.subtitle,
   };
 }
 
@@ -25,6 +26,7 @@ export default async function ReviewPage({ params }) {
     <article>
       <Container>
         <Heading>{review.title}</Heading>
+        <p className="font-semibold mb-3">{review.subtitle}</p>
         <div className="flex gap-3 items-baseline">
           <time className="inline-block italic mb-2" dateTime={review.date}>
             {review.date}
