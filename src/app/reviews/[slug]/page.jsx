@@ -1,5 +1,5 @@
-import { getReview, getSlugs } from "@/utils";
 import Image from "next/image";
+import { getReview, getSlugs } from "@/utils";
 import Heading from "@/components/ui/Heading";
 import ShareLink from "@/components/ShareLink";
 import Container from "@/components/layout/Container";
@@ -32,12 +32,13 @@ export default async function ReviewPage({ params }) {
           </time>
           <ShareLink />
         </div>
-        <img
+        <Image
           className="rounded mb-2"
           src={review.image}
           width="640"
-          height="320"
+          height="360"
           alt="Stardew Valley"
+          priority
         />
         <div
           className="prose prose-slate max-w-screen-sm"
