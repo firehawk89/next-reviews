@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${exo2.variable} ${orbitron.variable}`}>
       <body className="font-default bg-orange-50 flex min-h-screen flex-col">
         <Header />
-        <main className="flex-auto py-4">{children}</main>
+        <main className="flex-auto flex flex-col py-4">{children}</main>
         <Footer />
       </body>
     </html>
