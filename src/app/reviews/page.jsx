@@ -4,17 +4,12 @@ import { getReviews } from "@/utils";
 import Heading from "@/components/ui/Heading";
 import Container from "@/components/layout/Container";
 
-export const dynamic = "force-dynamic";
-
 export const metadata = {
   title: "Reviews",
 };
 
 export default async function ReviewsPage() {
   const reviews = await getReviews(6);
-//   console.log(
-//     "reviews slugs: " + reviews.map((review) => review.slug).join(",")
-//   );
 
   return (
     <section>

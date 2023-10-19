@@ -5,8 +5,6 @@ import Heading from "@/components/ui/Heading";
 import ShareLink from "@/components/ShareLink";
 import Container from "@/components/layout/Container";
 
-export const dynamic = "force-dynamic";
-
 export async function generateMetadata({ params }) {
   const review = await getReview(params.slug);
 
@@ -20,17 +18,16 @@ export async function generateMetadata({ params }) {
   };
 }
 
-// export async function generateStaticParams() {
-//   const slugs = await getSlugs();
-//   return slugs.map((slug) => ({
-//     slug,
-//   }));
-// }
+export async function generateStaticParams() {
+  const slugs = await getSlugs();
+  return slugs.map((slug) => ({
+    slug,
+  }));
+}
 
 export default async function ReviewPage({ params }) {
-//   console.log("review slug: " + params.slug);
   const review = await getReview(params.slug);
-  
+
   if (!review) {
     notFound();
   }
