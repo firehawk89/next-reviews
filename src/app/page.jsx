@@ -4,13 +4,8 @@ import { getReviews } from "@/utils";
 import Heading from "@/components/ui/Heading";
 import Container from "@/components/layout/Container";
 
-export const dynamic = "force-dynamic";
-
 export default async function HomePage() {
   const featuredReviews = await getReviews(3);
-  //   console.log(
-  //     "homepage slugs: " + featuredReviews.map((review) => review.slug).join(",")
-  //   );
 
   return (
     <section>
