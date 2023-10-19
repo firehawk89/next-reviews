@@ -14,7 +14,7 @@ export async function getReview(slug) {
   if (data.length === 0) {
     return null;
   }
-  
+
   const item = data[0];
 
   return {
@@ -49,7 +49,7 @@ async function fetchReviews(params) {
     `${CMS_URL}/api/reviews?` +
     qs.stringify(params, { encodeValuesOnly: true });
 
-  const response = await fetch(url);
+  const response = await fetch(url, { next: { revalidate: 30 } });
   if (!response.ok) {
     throw new Error(`CMS returned ${response.status} for ${url}`);
   }
