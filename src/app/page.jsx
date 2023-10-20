@@ -5,7 +5,7 @@ import Heading from "@/components/ui/Heading";
 import Container from "@/components/layout/Container";
 
 export default async function HomePage() {
-  const featuredReviews = await getReviews(3);
+  const { reviews: featuredReviews } = await getReviews(3);
 
   return (
     <section>
