@@ -24,15 +24,18 @@ export async function getReview(slug) {
   };
 }
 
-export async function getReviews(pageSize) {
-  const { data } = await fetchReviews({
+export async function getReviews(pageSize, page) {
+  const { data, meta } = await fetchReviews({
     fields: ["slug", "title", "subtitle", "publishedAt"],
     populate: { image: { fields: "url" } },
     sort: ["publishedAt:desc"],
-    pagination: { pageSize },
+    pagination: { page, pageSize },
   });
 
-  return data.map(toReviewObject);
+  return {
+    pageCount: meta.pagination.pageCount,
+    reviews: data.map(toReviewObject),
+  };
 }
 
 export async function getSlugs() {
