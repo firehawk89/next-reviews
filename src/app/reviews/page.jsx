@@ -4,6 +4,7 @@ import { getReviews } from "@/utils";
 import Heading from "@/components/ui/Heading";
 import Container from "@/components/layout/Container";
 import PaginationBar from "@/components/pagination/PaginationBar";
+import SearchBox from "@/components/SearchBox";
 
 const PAGE_SIZE = 6;
 
@@ -29,8 +30,11 @@ export default async function ReviewsPage({ searchParams }) {
     <section>
       <Container>
         <Heading>All Reviews</Heading>
-        <PaginationBar href="/reviews" pageCount={pageCount} page={page} />
-        <ul className="flex flex-row flex-wrap gap-3">
+        <div className="flex justify-between items-center gap-3">
+          <PaginationBar href="/reviews" pageCount={pageCount} page={page} />
+          <SearchBox />
+        </div>
+        <ul className="mt-5 flex flex-row justify-center flex-wrap gap-5">
           {reviews.map((review, index) => (
             <li
               key={review.slug}
