@@ -3,7 +3,7 @@ import PaginationLink from "./PaginationLink";
 
 export default function PaginationBar({ href, pageCount, page }) {
   return (
-    <div className="flex gap-2 pb-3">
+    <div className="flex gap-2">
       <PaginationLink href={`${href}?page=${page - 1}`} disabled={page === 1}>
         <ChevronLeftIcon className="h-5 w-5" />
         <span className="sr-only">Previous Page</span>
