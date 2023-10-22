@@ -1,3 +1,5 @@
+import "server-only";
+
 import qs from "qs";
 import { marked } from "marked";
 
